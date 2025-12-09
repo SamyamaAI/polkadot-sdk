@@ -1504,3 +1504,8 @@ wasmi = { opt-level = 3 }
 x25519-dalek = { opt-level = 3 }
 yamux = { opt-level = 3 }
 zeroize = { opt-level = 3 }
+
+# VIBHŪTI Protocol Fix: Patch getrandom from crates.io to add WASM features
+# This ensures all transitive dependencies use getrandom with proper WASM support
+[patch.crates-io]
+getrandom = { version = "0.2", features = ["js"] }
