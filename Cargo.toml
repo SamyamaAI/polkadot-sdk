@@ -1508,4 +1508,4 @@ zeroize = { opt-level = 3 }
 # VIBHŪTI Protocol Fix: Patch getrandom from crates.io to add WASM features
 # This ensures all transitive dependencies use getrandom with proper WASM support
 [patch.crates-io]
-getrandom = { path = "getrandom-0.2-wasm-wrapper" }
+getrandom = { git = "https://github.com/SamyamaAI/getrandom.git", branch = "wasm-js-default" }
